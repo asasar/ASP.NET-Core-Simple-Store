@@ -9,7 +9,7 @@ services:
     expose:
       - "8000"
     environment:
-      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_ENVIRONMENT: Production
       ConnectionStrings:SimpleAppConnection: Data Source=/dbSimplestore/simpleAppNetWeb.db
       #*************** SQL      *****************
       # ConnectionStrings:SimpleAppConnection: Server=<IP-public>;Database=simpleStore;Integrated Security=False;User Id=<User>;Password=<PASSWORD>;MultipleActiveResultSets=True

@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  simplestore:
+    ports:
+    - "8001:8000"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings:SimpleAppConnection: Data Source=/dbSimplestore/simpleAppNetWeb.db
+      Data:useSqLite: "true"
+      ASPNETCORE_URLS: http://*:8000

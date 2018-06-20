@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+  simplestore:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: asasar/simplestore-dev:latest
+    ports:
+    - "8001:8000"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings:SimpleAppConnection: Data Source=/dbSimplestore/simpleAppNetWeb.db
+      Data:useSqLite: "true"
+      #*************** SQL      *****************
+      # ConnectionStrings:SimpleAppConnection: Server=<IP-public>;Database=simpleStore;Integrated Security=False;User Id=<User>;Password=<PASSWORD>;MultipleActiveResultSets=True
+      # Data:useSqLite: "false"
+      #*****************************************
+      ASPNETCORE_URLS: http://*:8000

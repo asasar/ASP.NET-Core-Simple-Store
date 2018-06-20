@@ -1,0 +1,31 @@
+﻿@model IEnumerable<SimpleStore.Models.Product>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- MAIN CONTENT SECTION -->
+<section class="mainContent clearfix productsContent">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-sm-4 col-xs-12">
+                    <div class="productBox">
+                        <a asp-controller="app" asp-action="infoproduct" asp-route-id="@item.Id">
+                            <div class="productImage clearfix">
+                                <img src="@item.ImageUrl" alt="products-img">
+                            </div>
+                            <div class="productCaption clearfix">
+
+                                <h5>@item.Name</h5>
+
+                                <h3>&euro;@item.Price</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

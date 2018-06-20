@@ -1,0 +1,56 @@
+﻿@model SimpleStore.Models.Product
+
+@{
+    ViewBag.Title = "View Info Product Selected";
+}
+
+<!-- MAIN CONTENT SECTION -->
+<section class="mainContent clearfix">
+    <div class="container">
+        <div class="row singleProduct">
+            <div class="col-xs-12">
+                <div class="media">
+                    <div class="media-left productSlider">
+                        <div id="carousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="item active" data-thumb="0">
+                                    <img src="~/img/products/signle-product/product-slide-big-01.jpg">
+                                </div>
+                                <div class="item" data-thumb="1">
+                                    <img src="~/img/products/signle-product/product-slide-big-02.jpg">
+                                </div>
+                                <div class="item" data-thumb="2">
+                                    <img src="~/img/products/signle-product/product-slide-big-03.jpg">
+                                </div>
+                                <div class="item" data-thumb="3">
+                                    <img src="@Model.ImageUrl" alt="products-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <ul class="list-inline">
+                            <li><a href="index.html"><i class="fa fa-reply" aria-hidden="true"></i>Continue Shopping</a></li>
+                            <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Share This</a></li>
+                        </ul>
+                        <h2>@Model.Name</h2>
+                        <h3>@Model.Price</h3>
+                        <p>
+                            @Model.Description
+
+                            <div class="btn btn-area">
+                                <a asp-controller="app" asp-action="AddToCart" asp-route-id="@Model.Id"
+                                   class="btn btn-primary btn-block">
+                                    Add to cart
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

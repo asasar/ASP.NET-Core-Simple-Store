@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
+    <PackageReference Include="Moq" Version="4.8.2" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleStore.DbContext\SimpleStore.DbContext.csproj" />
+    <ProjectReference Include="..\SimpleStore.Models\SimpleStore.Models.csproj" />
+    <ProjectReference Include="..\SimpleStore.Utils\SimpleStore.Utils.csproj" />
+    <ProjectReference Include="..\SimpleStore.ViewModels\SimpleStore.ViewModels.csproj" />
+    <ProjectReference Include="..\SimpleStore\SimpleStore.csproj" />
+  </ItemGroup>
+
+</Project>

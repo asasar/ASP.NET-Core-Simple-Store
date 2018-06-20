@@ -1,0 +1,27 @@
+version: '3.4'
+services:
+  websimplestore:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.Production
+    image: 
+      asasar/simplestore:latest
+    expose:
+      - "8000"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings:SimpleAppConnection: Data Source=/dbSimplestore/simpleAppNetWeb.db
+      #*************** SQL      *****************
+      # ConnectionStrings:SimpleAppConnection: Server=<IP-public>;Database=simpleStore;Integrated Security=False;User Id=<User>;Password=<PASSWORD>;MultipleActiveResultSets=True
+      # Data:useSqLite: "false"
+      #*****************************************
+      Data:useSqLite: "true"
+      ASPNETCORE_URLS: http://*:8000
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "80:80"
+    links:
+      - websimplestore

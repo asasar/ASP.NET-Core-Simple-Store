@@ -11,10 +11,15 @@
   <ItemGroup>
     <None Include="docker-compose-linebase.override.yml" />
     <None Include="docker-compose-linebase.yml" />
+    <None Include="docker-compose.production-proxy.yml" />
     <None Include="docker-compose.production.yml" />
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
     <None Include="Dockerfile" />
     <None Include="Dockerfile.Production" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 </Project>

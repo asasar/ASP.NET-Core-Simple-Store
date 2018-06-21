@@ -9,13 +9,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleStore.Tests", "Simple
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{69AC9664-81A8-469F-8F41-066F110E0ECD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStore.Models", "SimpleStore.Models\SimpleStore.Models.csproj", "{1FAC328E-AB54-4BBE-AC69-690C2C4F2DC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleStore.Models", "SimpleStore.Models\SimpleStore.Models.csproj", "{1FAC328E-AB54-4BBE-AC69-690C2C4F2DC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStore.DbContext", "SimpleStore.DbContext\SimpleStore.DbContext.csproj", "{60657DF1-C7BB-4E17-9FC3-55E2CFCDEFD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleStore.DbContext", "SimpleStore.DbContext\SimpleStore.DbContext.csproj", "{60657DF1-C7BB-4E17-9FC3-55E2CFCDEFD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStore.ViewModels", "SimpleStore.ViewModels\SimpleStore.ViewModels.csproj", "{F2BE3277-42A1-4849-848B-3710B11DB81A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleStore.ViewModels", "SimpleStore.ViewModels\SimpleStore.ViewModels.csproj", "{F2BE3277-42A1-4849-848B-3710B11DB81A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStore.Utils", "SimpleStore.Utils\SimpleStore.Utils.csproj", "{9EA96192-796F-4AFC-B558-A0A46CD0D8BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleStore.Utils", "SimpleStore.Utils\SimpleStore.Utils.csproj", "{9EA96192-796F-4AFC-B558-A0A46CD0D8BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{8C3DDC3F-8F29-4CF7-9382-C59EE0237B99}"
+	ProjectSection(SolutionItems) = preProject
+		nginx\Dockerfile.nginx = nginx\Dockerfile.nginx
+		nginx\nginx.conf = nginx\nginx.conf
+		nginx\README.md = nginx\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
